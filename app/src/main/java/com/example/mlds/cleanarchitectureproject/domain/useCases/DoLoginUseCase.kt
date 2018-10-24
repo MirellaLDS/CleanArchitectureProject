@@ -12,11 +12,11 @@ interface LoginUseCaseInteractor {
 
 class DoLoginUseCase: LoginUseCaseInteractor {
 
-    @Inject
-    private lateinit var loginRepositoryInteractor: LoginRepositoryInteractor
+//    @Inject
+//    private lateinit var loginRepositoryInteractor: LoginRepositoryInteractor
 
     override fun doLogin(credential: UserCredentials) {
-        loginRepositoryInteractor.requestLogin(credential)
+//        loginRepositoryInteractor.requestLogin(credential)
     }
 
     @Module

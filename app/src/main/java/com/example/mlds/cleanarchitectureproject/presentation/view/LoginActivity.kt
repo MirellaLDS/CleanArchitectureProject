@@ -2,7 +2,9 @@ package com.example.mlds.cleanarchitectureproject.presentation.view
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import com.example.mlds.cleanarchitectureproject.R
+import com.example.mlds.cleanarchitectureproject.domain.useCases.DaggerMagicBox
 import com.example.mlds.cleanarchitectureproject.domain.useCases.GetUserUseCase
 import com.example.mlds.cleanarchitectureproject.presentation.presenter.LoginPresenter
 import kotlinx.android.synthetic.main.activity_main.*
@@ -24,14 +26,13 @@ class LoginActivity : AppCompatActivity(),
     }
 
     override fun showProgress() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        Toast.makeText(this, "If", Toast.LENGTH_LONG).show()
     }
 
     override fun hideProgress() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        Toast.makeText(this, "Else", Toast.LENGTH_LONG).show()
     }
 
     override fun showError(error: String) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 }
