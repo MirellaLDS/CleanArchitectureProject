@@ -1,14 +1,14 @@
+/*
 package com.example.mlds.cleanarchitectureproject.presentation.presenter
 
-import android.widget.Toast
+import android.text.TextUtils
+import com.example.mlds.cleanarchitectureproject.domain.interactor.GetUserUseCaseInteractor
 import com.example.mlds.cleanarchitectureproject.domain.model.UserCredentials
-import com.example.mlds.cleanarchitectureproject.domain.useCases.DaggerMagicBox
-import com.example.mlds.cleanarchitectureproject.domain.useCases.GetUserUseCaseInteractor
-import com.example.mlds.cleanarchitectureproject.presentation.view.CleanApplication
-import com.example.mlds.cleanarchitectureproject.presentation.view.LoginViewInterface
+import com.example.mlds.cleanarchitectureproject.CleanApplication
+import com.example.mlds.cleanarchitectureproject.presentation.mvp.login.LoginViewInterface
 import java.util.logging.Logger
 import javax.inject.Inject
-import kotlin.math.log
+
 
 class LoginPresenter(val loginView: LoginViewInterface) {
 
@@ -17,17 +17,20 @@ class LoginPresenter(val loginView: LoginViewInterface) {
 
     fun onLoginClicked(login: String, pw: String) {
 
-        if (isValidFormat(login, pw)){
-
-//            DaggerMagicBox.create().inject(this)
+        if (isValidFormat(login, pw))
+        {
             CleanApplication.getComponent().inject(this)
+
             val name = getUserUseCase.getUsers()[0].name
 
-////            requestLoginFromModel()
             loginView.showProgress()
+
             val logger = Logger.getLogger(">>> lOGGERR ")
+
             logger.info("Nome: $name")
+
         } else {
+
             loginView.hideProgress()
         }
 
@@ -38,10 +41,11 @@ class LoginPresenter(val loginView: LoginViewInterface) {
     }
 
     private fun isValidFormat(login: String, pw: String): Boolean {
-        return true
+
+        return ( TextUtils.isEmpty(login) && TextUtils.isEmpty(pw) )
     }
 
     private fun moveToNextScreen(){
 
     }
-}
+}*/

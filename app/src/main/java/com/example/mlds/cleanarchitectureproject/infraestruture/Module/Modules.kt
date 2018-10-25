@@ -1,8 +1,8 @@
-package com.example.mlds.cleanarchitectureproject.infraestruture.Module
+package com.example.mlds.cleanarchitectureproject.infraestruture.module
 
-import com.example.mlds.cleanarchitectureproject.infraestruture.repository.LoginRepositoryInteractor
+import com.example.mlds.cleanarchitectureproject.domain.interactor.LoginRepositoryInteractor
 import com.example.mlds.cleanarchitectureproject.infraestruture.repository.LoginRepository
-import com.example.mlds.cleanarchitectureproject.infraestruture.repository.UserRepositoryInteractor
+import com.example.mlds.cleanarchitectureproject.domain.interactor.UserRepositoryInteractor
 import com.example.mlds.cleanarchitectureproject.infraestruture.repository.UserRepository
 import dagger.Module
 import dagger.Provides

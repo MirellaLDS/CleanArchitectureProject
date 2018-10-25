@@ -1,5 +1,6 @@
 package com.example.mlds.cleanarchitectureproject.infraestruture.repository
 
+import com.example.mlds.cleanarchitectureproject.domain.interactor.LoginRepositoryInteractor
 import com.example.mlds.cleanarchitectureproject.domain.model.UserCredentials
 
 class LoginRepository: LoginRepositoryInteractor {
